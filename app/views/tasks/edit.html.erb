@@ -1,0 +1,18 @@
+<h1>タスク更新フォーム</h1>
+<%= form_with model: @task, local: true do |form| %>
+  <p>
+    タイトル：<br>
+    <%= form.text_field :title %>
+  </p>
+  <p>
+    本文：<br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    期限：<br>
+    <%= form.number_field :due_date %>
+  </p>
+  
+  <%= form.submit "更新YEAH!" %><br>
+  <%= link_to "戻る", tasks_path %>
+<% end %>
